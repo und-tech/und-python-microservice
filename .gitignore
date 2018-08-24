@@ -102,4 +102,4 @@ ENV/
 # vs code
 .vscode/
 .pypirc
-und_microservice.egg-info/
+und_microservice.egg-info
