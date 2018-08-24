@@ -1,0 +1,4 @@
+service:
+  name: "x"
+  ip: "127.0.0.1"
+  user_name: "user"
