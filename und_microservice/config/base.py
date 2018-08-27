@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """ Comportamiento base para administrador de configuraciones"""
 
+from abc import ABC
 from und_microservice.config.exception.config import NotConfigException
 from und_microservice.config.exception.config import NotValueConfigException
 
-class BaseConfig(object):
+class  BaseConfig(ABC):
     """ Clase de configuracion base """
     _config = None
 

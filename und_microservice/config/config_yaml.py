@@ -10,10 +10,10 @@ from und_microservice.helper.data import dict_merge
 class ConfigYaml(BaseConfig):
     """ Manejador de config en yml """
 
-    def __init__(self):
+    def __init__(self, path='config/'):
         self._config = {}
         yaml_file = File()
-        paths = glob.glob('config/*yml')
+        paths = glob.glob(path + '*yml')
         for path in paths:
             config = yaml_file.read_yml(path)
             dict_merge(self._config, config)

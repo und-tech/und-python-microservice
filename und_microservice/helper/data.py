@@ -50,9 +50,9 @@ def get_multi_objects_dict(*args, params=None):
 
 def dict_merge(dct, merge_dct):
     """Mescla diccionarios"""
-    for index, in merge_dct.items():
+    for index, item in merge_dct.items():
         if (index in dct and isinstance(dct[index], dict)
-                and isinstance(merge_dct[index], collections.Mapping)):
-            dict_merge(dct[index], merge_dct[index])
+                and isinstance(item, collections.Mapping)):
+            dict_merge(dct[index], item)
         else:
-            dct[index] = merge_dct[index]
+            dct[index] = item
