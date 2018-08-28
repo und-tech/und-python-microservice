@@ -32,8 +32,8 @@ sdist: clean
 	ls -l dist
 
 test:
-	pip install -e .
-	py.test test/
+	$(BASE_BASH) "pip install -e ."
+	$(BASE_BASH) "pytest --cache-clear test/"
 
 coverage:
 	coverage run --source=dotenv --omit='*tests*' -m py.test tests/ -v --tb=native
